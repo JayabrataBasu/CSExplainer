@@ -1,0 +1,479 @@
+{
+  "algorithm": {
+    "definition": "A step-by-step procedure for solving a problem or accomplishing a task.",
+    "complexity_levels": {
+      "beginner": "Think of an algorithm like a recipe that tells you exactly what to do at each step.",
+      "intermediate": "Algorithms are precise sequences of operations that transform input into desired output.",
+      "advanced": "Algorithms represent computational procedures with defined input-output behavior and complexity characteristics."
+    },
+    "related_concepts": ["data structures", "complexity analysis", "recursion"],
+    "examples": [
+      {
+        "name": "Binary Search",
+        "description": "An efficient algorithm for finding an item in a sorted list by repeatedly dividing the search space in half."
+      },
+      {
+        "name": "Bubble Sort",
+        "description": "A simple sorting algorithm that repeatedly steps through the list, compares adjacent elements, and swaps them if they're in the wrong order."
+      }
+    ]
+  },
+  
+  "recursion": {
+    "definition": "A programming technique where a function calls itself to solve a problem by breaking it down into smaller instances of the same problem.",
+    "complexity_levels": {
+      "beginner": "Recursion is like solving a problem by breaking it into smaller versions of the same problem until you reach a simple case.",
+      "intermediate": "Recursion involves a function that calls itself with modified parameters until it reaches one or more base cases that can be solved directly.",
+      "advanced": "Recursion represents a control flow mechanism that utilizes the call stack to solve problems through self-reference, often mapped to mathematical induction principles."
+    },
+    "related_concepts": ["stack", "base case", "call stack", "dynamic programming"],
+    "examples": [
+      {
+        "name": "Factorial Calculation",
+        "description": "Computing n! by defining it as n * (n-1)! with base case 0! = 1."
+      },
+      {
+        "name": "Tree Traversal",
+        "description": "Visiting all nodes in a tree structure by recursively processing subtrees."
+      }
+    ]
+  },
+  "complexity analysis": {
+    "definition": "The process of determining how the resources (time and space) required by an algorithm scale with input size.",
+    "complexity_levels": {
+      "beginner": "Complexity analysis helps you understand if your program will be fast enough or use too much memory when working with large amounts of data.",
+      "intermediate": "Complexity analysis quantifies resource usage in terms of input size using Big O notation to express upper bounds on time and space requirements.",
+      "advanced": "Complexity analysis provides asymptotic bounds on resource utilization, focusing on dominant factors as input sizes approach infinity while abstracting away constant factors and lower-order terms."
+    },
+    "related_concepts": ["Big O notation", "time complexity", "space complexity", "algorithm efficiency"],
+    "examples": [
+      {
+        "name": "O(n²) Sorting Algorithms",
+        "description": "Algorithms like bubble sort and insertion sort that require quadratic time as input size increases."
+      },
+      {
+        "name": "O(log n) Binary Search",
+        "description": "An algorithm whose time complexity grows logarithmically because it halves the search space with each step."
+      }
+    ]
+  },
+  "object-oriented programming": {
+    "definition": "A programming paradigm based on the concept of objects that contain data and code to manipulate that data.",
+    "complexity_levels": {
+      "beginner": "Object-oriented programming is like creating digital models of real-world things that have properties and can perform actions.",
+      "intermediate": "OOP encapsulates data and behavior within objects, allowing for inheritance, polymorphism, and abstraction to manage software complexity.",
+      "advanced": "Object-oriented programming implements a computational model based on sending messages between objects, with inheritance hierarchies and polymorphic dispatch enabling code reuse and extensibility."
+    },
+    "related_concepts": ["class", "inheritance", "polymorphism", "encapsulation", "abstraction"],
+    "examples": [
+      {
+        "name": "Class Inheritance",
+        "description": "Creating a 'Vehicle' parent class with common attributes, then specific child classes like 'Car' and 'Motorcycle' that inherit those attributes."
+      },
+      {
+        "name": "Polymorphism",
+        "description": "Different classes implementing the same interface, allowing objects of different types to be treated uniformly, such as a 'draw()' method in different shape classes."
+      }
+    ]
+  },
+  "database": {
+    "definition": "An organized collection of structured data stored electronically and accessed from a computer system.",
+    "complexity_levels": {
+      "beginner": "A database is like a digital filing cabinet that stores information in an organized way so you can easily find what you need.",
+      "intermediate": "Databases provide structured storage with query capabilities, transaction support, and data integrity mechanisms to manage large amounts of information efficiently.",
+      "advanced": "Database systems implement data models with specific access patterns, concurrency control mechanisms, and storage optimizations to balance various performance, consistency, and availability requirements."
+    },
+    "related_concepts": ["SQL", "DBMS", "relational model", "NoSQL", "ACID properties"],
+    "examples": [
+      {
+        "name": "Relational Database",
+        "description": "A database that organizes data into tables with rows and columns, with relationships between tables established through keys."
+      },
+      {
+        "name": "Document Database",
+        "description": "A NoSQL database that stores data in flexible, JSON-like documents rather than rigid tables with uniform structure."
+      }
+    ]
+  },
+  "hash table": {
+    "definition": "A data structure that implements an associative array abstract data type, mapping keys to values using a hash function.",
+    "complexity_levels": {
+      "beginner": "A hash table is like a dictionary where you can quickly look up values using special keywords instead of searching through everything.",
+      "intermediate": "Hash tables map keys to array positions using a hash function, enabling O(1) average-case time complexity for insertions, deletions, and lookups.",
+      "advanced": "Hash tables balance space-time tradeoffs through collision resolution strategies and dynamic resizing, offering amortized constant-time operations depending on hash function quality and load factor management."
+    },
+    "related_concepts": ["hashing function", "collision resolution", "load factor", "associative array"],
+    "examples": [
+      {
+        "name": "Dictionary Implementation",
+        "description": "Using hash tables to implement language dictionaries where words are keys and definitions are values."
+      },
+      {
+        "name": "Caching System",
+        "description": "Implementing a cache using a hash table where URLs are keys and webpage content are values for quick retrieval."
+      }
+    ]
+  },
+  "graph": {
+    "definition": "A data structure consisting of a finite set of vertices (nodes) and edges connecting them.",
+    "complexity_levels": {
+      "beginner": "A graph is like a map showing connections between different locations or objects.",
+      "intermediate": "Graphs represent relationships between entities, allowing for modeling of networks, dependencies, and paths through connected structures.",
+      "advanced": "Graphs provide mathematical abstractions for modeling pairwise relationships with specific properties like directedness, weights, and connectedness that enable complex algorithms for traversal, path-finding, and flow optimization."
+    },
+    "related_concepts": ["tree", "vertex", "edge", "adjacency", "path", "cycle"],
+    "examples": [
+      {
+        "name": "Social Network",
+        "description": "Modeling friendships in a social platform where users are vertices and friendships are edges."
+      },
+      {
+        "name": "Road Network",
+        "description": "Representing cities as vertices and roads as edges, with weights indicating distances or travel times."
+      }
+    ]
+  },
+  "compiler": {
+    "definition": "A program that translates source code written in a high-level programming language into machine code or another target language.",
+    "complexity_levels": {
+      "beginner": "A compiler is like a translator that converts human-readable code into instructions the computer can understand and execute.",
+      "intermediate": "Compilers perform lexical analysis, parsing, semantic analysis, optimization, and code generation to transform source code into efficient target code.",
+      "advanced": "Compilers implement multi-phase translation processes with sophisticated optimizations, leveraging formal language theory and program analysis techniques to ensure semantic correctness while maximizing execution efficiency."
+    },
+    "related_concepts": ["lexical analysis", "parsing", "syntax tree", "code generation", "optimization"],
+    "examples": [
+      {
+        "name": "GCC",
+        "description": "The GNU Compiler Collection that translates C, C++, and other languages into machine code for various processor architectures."
+      },
+      {
+        "name": "TypeScript Compiler",
+        "description": "Translates TypeScript code with static types into standard JavaScript that can run in browsers."
+      }
+    ]
+  },
+  "concurrency": {
+    "definition": "The ability of a system to execute multiple tasks simultaneously by interleaving their execution.",
+    "complexity_levels": {
+      "beginner": "Concurrency is like having multiple cooks in a kitchen working on different dishes at the same time.",
+      "intermediate": "Concurrent systems manage multiple execution flows that progress simultaneously, requiring coordination mechanisms to ensure correct behavior when accessing shared resources.",
+      "advanced": "Concurrency introduces non-deterministic execution ordering that requires synchronization primitives, memory models, and design patterns to manage race conditions, deadlocks, and state visibility issues."
+    },
+    "related_concepts": ["parallelism", "thread", "mutex", "semaphore", "deadlock", "race condition"],
+    "examples": [
+      {
+        "name": "Web Server",
+        "description": "Handling multiple client requests simultaneously by processing each in a separate thread."
+      },
+      {
+        "name": "Database Transactions",
+        "description": "Managing concurrent access to shared data through isolation levels and locking mechanisms."
+      }
+    ]
+  },
+  "machine learning": {
+    "definition": "A field of study that gives computers the ability to learn without being explicitly programmed.",
+    "complexity_levels": {
+      "beginner": "Machine learning is like teaching computers to make decisions by showing them examples rather than giving them specific instructions.",
+      "intermediate": "Machine learning systems build mathematical models from training data to make predictions or decisions without explicit programming for each case.",
+      "advanced": "Machine learning algorithms optimize parameterized models through objective functions, regularization techniques, and gradient-based methods to extract patterns from high-dimensional data while maintaining generalization capabilities."
+    },
+    "related_concepts": ["supervised learning", "unsupervised learning", "neural networks", "feature extraction", "overfitting"],
+    "examples": [
+      {
+        "name": "Image Classification",
+        "description": "Training a neural network to recognize objects in images by learning from labeled examples."
+      },
+      {
+        "name": "Recommendation System",
+        "description": "Building a model that suggests products based on user behavior patterns and similarities."
+      }
+    ]
+  },
+  "tree": {
+    "definition": "A hierarchical data structure consisting of nodes connected by edges, with one node designated as the root.",
+    "complexity_levels": {
+      "beginner": "A tree is like a family tree where each person can have multiple children but only one parent, except for the first ancestor.",
+      "intermediate": "Trees organize data hierarchically with parent-child relationships, enabling efficient searching, insertion, and deletion operations through various traversal methods.",
+      "advanced": "Tree structures provide logarithmic-time operations for balanced implementations, with specialized variants offering different performance characteristics for specific use cases like search optimization or prefix matching."
+    },
+    "related_concepts": ["binary tree", "balanced tree", "traversal", "depth", "node", "leaf"],
+    "examples": [
+      {
+        "name": "Binary Search Tree",
+        "description": "A tree where each node has at most two children, with all left descendants less than the current node and all right descendants greater."
+      },
+      {
+        "name": "DOM Tree",
+        "description": "The tree structure representing HTML documents in browsers, where each element is a node with parent-child relationships."
+      }
+    ]
+  },
+  "virtual memory": {
+    "definition": "A memory management technique that provides an abstraction of the physical memory available to a program.",
+    "complexity_levels": {
+      "beginner": "Virtual memory is like having a small desk but a large filing cabinet nearby, bringing papers to the desk only when you need them.",
+      "intermediate": "Virtual memory creates an illusion of a large, contiguous address space regardless of physical memory constraints by mapping virtual addresses to physical storage using paging or segmentation.",
+      "advanced": "Virtual memory systems implement address translation through page tables with hardware acceleration, employing replacement algorithms and multi-level caching to optimize performance across the memory hierarchy."
+    },
+    "related_concepts": ["paging", "swap space", "memory management unit", "page fault", "address translation"],
+    "examples": [
+      {
+        "name": "Page Swapping",
+        "description": "Moving less frequently accessed memory pages to disk to free up physical memory for active processes."
+      },
+      {
+        "name": "Memory Protection",
+        "description": "Preventing processes from accessing memory not allocated to them by restricting access to virtual address ranges."
+      }
+    ]
+  },
+  "functional programming": {
+    "definition": "A programming paradigm that treats computation as the evaluation of mathematical functions and avoids changing state and mutable data.",
+    "complexity_levels": {
+      "beginner": "Functional programming is like building with mathematical formulas instead of step-by-step instructions, focusing on what to compute rather than how to compute it.",
+      "intermediate": "Functional programming emphasizes immutable data, first-class functions, and declarative expressions to create predictable, composable, and parallelizable code.",
+      "advanced": "Functional programming models computation through function composition, higher-order functions, and algebraic structures, leveraging referential transparency and lazy evaluation to simplify reasoning about program behavior."
+    },
+    "related_concepts": ["pure function", "immutability", "higher-order function", "recursion", "lambda calculus"],
+    "examples": [
+      {
+        "name": "Map Function",
+        "description": "Transforming each element in a collection by applying a function, without modifying the original data."
+      },
+      {
+        "name": "Reduce Operation",
+        "description": "Combining all elements in a collection into a single value through repeated application of a binary function."
+      }
+    ]
+  },
+  "API": {
+    "definition": "A set of rules and protocols that allows different software applications to communicate with each other.",
+    "complexity_levels": {
+      "beginner": "An API is like a menu in a restaurant that tells you what you can order and how to place your order to get what you want.",
+      "intermediate": "APIs define interfaces between software components, allowing them to interact through well-defined functions, data structures, and communication protocols.",
+      "advanced": "APIs implement abstraction boundaries that encapsulate implementation details while exposing controlled functionality, enabling decoupled system evolution and third-party integration through standardized interaction patterns."
+    },
+    "related_concepts": ["REST", "SDK", "endpoint", "interface", "web service"],
+    "examples": [
+      {
+        "name": "RESTful API",
+        "description": "An API adhering to REST architectural constraints, typically using HTTP methods to perform operations on resources."
+      },
+      {
+        "name": "Browser API",
+        "description": "Interfaces provided by web browsers to access features like geolocation, storage, or camera from JavaScript code."
+      }
+    ]
+  },
+  
+    "cryptography": {
+      "definition": "The practice and study of techniques for secure communication in the presence of adversaries.",
+      "complexity_levels": {
+        "beginner": "Cryptography is like sending a locked box through the mail where only the recipient has the key, keeping your message safe from others.",
+        "intermediate": "Cryptography applies mathematical algorithms to transform plaintext into ciphertext and back, ensuring confidentiality, integrity, authentication, and non-repudiation of data.",
+        "advanced": "Cryptography encompasses symmetric and asymmetric encryption, digital signatures, key exchange protocols, and secure hash functions, with security proofs based on computational hardness assumptions and information-theoretic principles."
+      },
+      "related_concepts": ["encryption", "decryption", "public key", "private key", "hash function"],
+      "examples": [
+        {
+          "name": "AES Encryption",
+          "description": "A symmetric encryption algorithm widely used to secure sensitive data in transit or at rest."
+        },
+        {
+          "name": "RSA Cryptosystem",
+          "description": "An asymmetric encryption scheme for secure key exchange and digital signatures."
+        }
+      ]
+    },
+    "operating system": {
+      "definition": "Software that manages computer hardware and provides common services for computer programs.",
+      "complexity_levels": {
+        "beginner": "An operating system is like the manager of a hotel that coordinates room assignments, handles requests, and ensures everyone has what they need.",
+        "intermediate": "Operating systems abstract hardware complexity, manage resources, provide user interfaces, and enable software applications to run efficiently.",
+        "advanced": "Operating systems implement process scheduling, memory management, file systems, device drivers, and security mechanisms to ensure system stability, performance, and security."
+      },
+      "related_concepts": ["kernel", "process", "memory management", "file system", "device driver"],
+      "examples": [
+        {
+          "name": "Linux Kernel",
+          "description": "The core of the Linux operating system, handling hardware interactions and resource management."
+        },
+        {
+          "name": "Windows NT",
+          "description": "A family of operating systems developed by Microsoft, known for its modular architecture and security features."
+        }
+      ]
+    },
+    "data structures": {
+      "definition": "Ways of organizing and storing data to perform operations efficiently.",
+      "complexity_levels": {
+        "beginner": "Think of data structures like different types of containers for organizing things. A list is like a row of boxes, a stack is like a pile of plates, and a queue is like a line at a bus stop.",
+        "intermediate": "Data structures such as arrays, linked lists, trees, and hash tables provide various ways to store and access data efficiently, optimizing operations like searching, sorting, and inserting.",
+        "advanced": "Advanced data structures, including balanced trees (e.g., AVL, Red-Black trees), graphs, and tries, optimize computational efficiency through logarithmic or constant-time operations, crucial for algorithmic performance and scalability."
+      },
+      "related_concepts": ["array", "linked list", "tree", "hash table", "graph"],
+      "examples": [
+        {
+          "name": "Binary Search Tree",
+          "description": "A tree-based data structure where each node has at most two children, enabling efficient searching and sorting."
+        },
+        {
+          "name": "Hash Table",
+          "description": "A data structure that uses a hash function to map keys to values, allowing near-instant lookups."
+        }
+      ]
+    },
+    "computer networks": {
+      "definition": "A system of interconnected devices that communicate using protocols.",
+      "complexity_levels": {
+        "beginner": "A computer network is like a postal system for computers, where messages (data) travel between different locations (devices).",
+        "intermediate": "Networks use layers (such as the OSI model) to facilitate communication, enabling devices to share resources, exchange information, and access the internet.",
+        "advanced": "Computer networks implement layered architectures (OSI, TCP/IP) with protocols handling routing, congestion control, and security mechanisms, optimizing data flow across physical and virtual infrastructures."
+      },
+      "related_concepts": ["TCP/IP", "router", "switch", "protocol", "firewall"],
+      "examples": [
+        {
+          "name": "TCP/IP Protocol Suite",
+          "description": "A foundational set of communication protocols governing the internet."
+        },
+        {
+          "name": "DNS (Domain Name System)",
+          "description": "A hierarchical system that translates human-friendly domain names into IP addresses."
+        }
+      ]
+    },
+    "software testing": {
+      "definition": "The process of evaluating software to identify defects or ensure it meets specified requirements.",
+      "complexity_levels": {
+        "beginner": "Software testing is like checking a cake to make sure it's baked properly before serving it to guests.",
+        "intermediate": "Testing involves designing test cases, executing them, and comparing actual outcomes against expected results to validate software functionality and quality.",
+        "advanced": "Software testing encompasses various techniques (unit, integration, system, acceptance) and methodologies (TDD, BDD) to ensure software reliability, maintainability, and correctness."
+      },
+      "related_concepts": ["test case", "unit testing", "integration testing", "regression testing", "test automation"],
+      "examples": [
+        {
+          "name": "JUnit Testing",
+          "description": "A popular Java testing framework for writing and running repeatable tests."
+        },
+        {
+          "name": "Selenium Testing",
+          "description": "An open-source tool for automating web browsers to validate web applications."
+        }
+      ]
+    },
+    "web development": {
+      "definition": "The process of creating websites and web applications.",
+      "complexity_levels": {
+        "beginner": "Web development is like building a house with bricks (HTML), mortar (CSS), and utilities (JavaScript) to create a place where people can interact and transact.",
+      "intermediate": "Web development involves front-end (client-side) and back-end (server-side) technologies, databases, APIs, and frameworks to build interactive and dynamic web experiences.",  
+      "advanced": "Web development integrates design, user experience, performance optimization, security, and scalability considerations to deliver robust, accessible, and responsive web applications."
+      },
+    "related_concepts": ["HTML", "CSS", "JavaScript", "API", "framework"],
+    "examples": [
+      {
+        "name": "React.js",
+        "description": "A JavaScript library for building user interfaces, focusing on component-based architecture and declarative views."
+      },
+      {
+        "name": "Node.js",
+        "description": "A JavaScript runtime environment that executes server-side code, enabling full-stack JavaScript development."
+      }
+    ]
+  },
+  "cybersecurity": {
+    "definition": "The practice of protecting systems, networks, and data from digital attacks.",
+    "complexity_levels": {
+      "beginner": "Cybersecurity is like having a lock on your door and curtains on your windows to keep intruders out of your home.",
+      "intermediate": "Cybersecurity involves identifying risks, implementing safeguards, monitoring for threats, and responding to security incidents to protect digital assets.",
+      "advanced": "Cybersecurity strategies encompass defense-in-depth, threat modeling, penetration testing, incident response, and compliance frameworks to mitigate vulnerabilities and safeguard critical information assets."
+    },
+    "related_concepts": ["firewall", "encryption", "penetration testing", "incident response", "zero-day exploit"],
+    "examples": [
+      {
+        "name": "Firewall Configuration",
+        "description": "Setting up network security policies to control incoming and outgoing traffic based on defined rules."
+      },
+      {
+        "name": "Security Information and Event Management (SIEM)",
+        "description": "A system that provides real-time analysis of security alerts generated by network hardware and applications."
+      }
+    ]
+  },
+  "cloud computing": {
+    "definition": "The delivery of computing services over the internet, offering resources like servers, storage, databases, networking, and software.",
+    "complexity_levels": {
+      "beginner": "Cloud computing is like renting a car for a road trip instead of buying and maintaining your own vehicle.",
+      "intermediate": "Cloud services include Infrastructure as a Service (IaaS), Platform as a Service (PaaS), and Software as a Service (SaaS) models, enabling scalable and flexible IT solutions.",
+      "advanced": "Cloud computing leverages virtualization, containerization, orchestration, and serverless architectures to optimize resource utilization, scalability, and cost efficiency for diverse workloads."
+    },
+    "related_concepts": ["AWS", "Azure", "Google Cloud", "virtualization", "serverless"],
+    "examples": [
+      {
+        "name": "Amazon Web Services (AWS)",
+        "description": "A cloud platform offering a wide range of services, including computing power, storage options, and content delivery."
+      },
+      {
+        "name": "Docker Containers",
+        "description": "Lightweight, portable, and self-sufficient containers that package applications and their dependencies for easy deployment."
+      }
+    ]
+  },
+  "agile methodology": {
+    "definition": "An iterative approach to software development that values flexibility, customer collaboration, and incremental delivery.",
+    "complexity_levels": {
+      "beginner": "Agile methodology is like building a house room by room, getting feedback from the owners at each stage to ensure it meets their needs.",
+      "intermediate": "Agile practices include Scrum, Kanban, and Extreme Programming (XP), emphasizing adaptive planning, continuous improvement, and rapid response to change.",
+      "advanced": "Agile frameworks promote self-organizing teams, cross-functional collaboration, and iterative development cycles to deliver high-quality software that meets evolving customer requirements."
+    },
+    "related_concepts": ["Scrum", "Kanban", "user story", "sprint", "retrospective"],
+    "examples": [
+      {
+        "name": "Scrum Framework",
+        "description": "An agile process framework with roles (Product Owner, Scrum Master, Team), events (Sprint, Daily Scrum), and artifacts (Product Backlog, Sprint Backlog)."
+      },
+      {
+        "name": "Kanban Board",
+        "description": "A visual management tool that helps teams track work in progress and optimize workflow efficiency."
+      }
+    ]
+  },
+  "software architecture": {
+    "definition": "The high-level structure of software systems, encompassing components, relationships, constraints, and principles.",
+    "complexity_levels": {
+      "beginner": "Software architecture is like designing a blueprint for a building, defining the layout, materials, and interactions between different parts.",
+      "intermediate": "Architectural patterns (MVC, Microservices, Layered) and quality attributes (scalability, maintainability, security) guide software design decisions to meet functional and non-functional requirements.",
+      "advanced": "Software architecture involves trade-offs between conflicting goals, design patterns, architectural styles, and system decomposition strategies to create robust, extensible, and maintainable software systems."
+    },
+    "related_concepts": ["MVC", "Microservices", "scalability", "design patterns", "architectural style"],
+    "examples": [
+      {
+        "name": "Model-View-Controller (MVC)",
+        "description": "An architectural pattern that separates an application into three interconnected components: Model, View, and Controller."
+      },
+      {
+        "name": "Microservices Architecture",
+        "description": "An architectural style that structures an application as a collection of loosely coupled services, each independently deployable and scalable."
+      }
+    ]
+  },
+  "data science": {
+    "definition": "An interdisciplinary field that uses scientific methods, algorithms, and systems to extract knowledge and insights from structured and unstructured data.",
+    "complexity_levels": {
+      "beginner": "Data science is like solving puzzles with data, using statistics and programming to uncover hidden patterns and make informed decisions.",
+      "intermediate": "Data science involves data collection, cleaning, analysis, visualization, and interpretation to derive actionable insights and support data-driven decision-making.",
+      "advanced": "Data science integrates machine learning, statistical modeling, data mining, and domain expertise to solve complex problems, optimize processes, and predict future trends."
+    },
+    "related_concepts": ["machine learning", "data visualization", "big data", "predictive analytics", "data engineering"],
+    "examples": [
+      {
+        "name": "Predictive Analytics",
+        "description": "Using historical data and statistical algorithms to forecast future trends, behaviors, or events."
+      },
+      {
+        "name": "Natural Language Processing (NLP)",
+        "description": "A field of AI that enables computers to understand, interpret, and generate human language."
+      }
+    ]
+  }}
+  
