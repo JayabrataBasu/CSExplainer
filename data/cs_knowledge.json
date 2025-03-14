@@ -703,7 +703,675 @@
         "description": "Filling an incomplete Sudoku grid by systematically placing numbers and backtracking when conflicts arise."
       }
     ]
+  },
+  "bit manipulation": {
+    "definition": "A technique for performing operations on binary numbers at the bit level, often used for optimization and cryptography.",
+    "complexity_levels": {
+      "beginner": "Bit manipulation is like using light switches—each bit can be turned on (1) or off (0).",
+      "intermediate": "Operations like AND, OR, XOR, and bit shifting allow efficient computations, such as checking odd/even numbers or swapping values.",
+      "advanced": "Bitwise operations are fundamental in cryptographic algorithms, low-level memory management, and CPU instruction optimizations."
+    },
+    "related_concepts": ["Binary Numbers", "Bitwise Operators", "Masking"],
+    "examples": [
+      {
+        "name": "Hamming Distance",
+        "description": "Measures the difference between two binary strings by counting differing bits."
+      },
+      {
+        "name": "Gray Code",
+        "description": "A binary numeral system where two successive values differ in only one bit."
+      }
+    ]
+  },
+
+  "computational geometry": {
+    "definition": "A field of computer science that studies algorithms for geometric problems, such as finding convex hulls or computing intersections.",
+    "complexity_levels": {
+      "beginner": "Computational geometry is about solving problems involving points, lines, and shapes, like finding the shortest path on a map.",
+      "intermediate": "Algorithms like Graham's scan for convex hulls or the sweep line technique help solve geometric problems efficiently.",
+      "advanced": "Advanced topics include Voronoi diagrams, Delaunay triangulation, and applications in graphics, robotics, and geospatial analysis."
+    },
+    "related_concepts": ["Convex Hull", "Delaunay Triangulation", "Voronoi Diagram"],
+    "examples": [
+      {
+        "name": "Convex Hull Problem",
+        "description": "Finding the smallest convex shape that encloses a set of points."
+      },
+      {
+        "name": "Line Segment Intersection",
+        "description": "Determining if two line segments intersect using geometric algorithms."
+      }
+    ]
+  },
+
+  "boolean algebra": {
+    "definition": "A branch of algebra that deals with binary variables and logical operations, fundamental to digital logic and computing.",
+    "complexity_levels": {
+      "beginner": "Boolean algebra is like a system of simple yes/no questions—1 means true, 0 means false.",
+      "intermediate": "Logical operations such as AND, OR, NOT, and XOR are used in circuit design and database queries.",
+      "advanced": "Boolean algebra is the foundation of propositional logic, Karnaugh maps, and hardware optimization techniques."
+    },
+    "related_concepts": ["Logic Gates", "Truth Tables", "Propositional Logic"],
+    "examples": [
+      {
+        "name": "Digital Circuits",
+        "description": "Uses Boolean logic to build electronic circuits like adders and multiplexers."
+      },
+      {
+        "name": "Database Query Optimization",
+        "description": "SQL queries use Boolean algebra to filter and retrieve data efficiently."
+      }
+    ]
+  },
+
+  "Turing machine": {
+    "definition": "A theoretical computational model that defines an abstract machine capable of simulating any algorithm.",
+    "complexity_levels": {
+      "beginner": "A Turing machine is like an infinitely long piece of paper with rules for reading, writing, and moving left or right.",
+      "intermediate": "It consists of a tape, a read/write head, and a set of states that determine its operations based on a transition function.",
+      "advanced": "Turing machines are the foundation of computational theory, used to study decidability, complexity classes, and the limits of computation."
+    },
+    "related_concepts": ["Automata Theory", "Decidability", "Computability"],
+    "examples": [
+      {
+        "name": "Universal Turing Machine",
+        "description": "A machine that can simulate any other Turing machine, proving the concept of general-purpose computation."
+      },
+      {
+        "name": "Halting Problem",
+        "description": "A famous problem that proves certain computations can never be determined to halt or run forever."
+      }
+    ]
+  },
+
+  "regular expressions": {
+    "definition": "A sequence of characters defining a search pattern used for text processing and data validation.",
+    "complexity_levels": {
+      "beginner": "Regular expressions are like search patterns that help find specific words or characters in a text.",
+      "intermediate": "Regex uses metacharacters like *, +, and ? to define patterns for matching complex text structures.",
+      "advanced": "Advanced regex concepts include lookaheads, backreferences, and non-greedy matching for sophisticated text parsing."
+    },
+    "related_concepts": ["Pattern Matching", "Finite Automata", "Lexical Analysis"],
+    "examples": [
+      {
+        "name": "Email Validation",
+        "description": "Regex patterns ensure that email addresses follow a proper format."
+      },
+      {
+        "name": "Syntax Highlighting",
+        "description": "Programming editors use regex to highlight code syntax dynamically."
+      }
+    ]
+  },
+
+  "stream processing": {
+    "definition": "A computing paradigm that continuously processes data as it arrives, often used in real-time analytics.",
+    "complexity_levels": {
+      "beginner": "Stream processing is like a conveyor belt—data flows in, is processed immediately, and moves on without waiting for the whole batch.",
+      "intermediate": "Frameworks like Apache Kafka and Apache Flink handle high-speed data streams, enabling real-time decision-making.",
+      "advanced": "Advanced stream processing involves windowing functions, distributed event processing, and low-latency computation architectures."
+    },
+    "related_concepts": ["Real-Time Processing", "Kafka", "Event-Driven Architecture"],
+    "examples": [
+      {
+        "name": "Fraud Detection",
+        "description": "Banks use stream processing to detect fraudulent transactions in real-time."
+      },
+      {
+        "name": "Live Video Analytics",
+        "description": "Platforms analyze video streams to detect objects, people, or motion dynamically."
+      }
+    ]
+  },
+
+  
+  "formal languages": {
+    "definition": "A set of rules and symbols used to define the syntax and semantics of programming languages and automata theory.",
+    "complexity_levels": {
+      "beginner": "Formal languages are like the grammar rules of human languages but for computers—they define what is and isn't a valid statement.",
+      "intermediate": "They are categorized into regular, context-free, context-sensitive, and recursively enumerable languages, each with different computational power.",
+      "advanced": "Formal language theory underpins compiler design, natural language processing, and complexity theory, with applications in Chomsky hierarchies and pushdown automata."
+    },
+    "related_concepts": ["Automata Theory", "Syntax", "Parsing"],
+    "examples": [
+      {
+        "name": "Regular Expressions",
+        "description": "Used in pattern matching and lexical analysis to define valid text structures."
+      },
+      {
+        "name": "Context-Free Grammars",
+        "description": "Define the syntax of programming languages using recursive production rules."
+      }
+    ]
+  },
+
+  "distributed computing": {
+    "definition": "A field of computer science where multiple computers work together as a single system to solve problems efficiently.",
+    "complexity_levels": {
+      "beginner": "Imagine a group of people working together on a puzzle—each person solves a small part to finish faster.",
+      "intermediate": "Distributed computing involves networked systems communicating to share workload, improve fault tolerance, and enhance computational power.",
+      "advanced": "Advanced topics include consensus algorithms (Raft, Paxos), distributed databases, and distributed file systems such as Hadoop and Cassandra."
+    },
+    "related_concepts": ["Parallel Computing", "Cloud Computing", "Concurrency"],
+    "examples": [
+      {
+        "name": "MapReduce",
+        "description": "A programming model used for processing large-scale data across distributed systems."
+      },
+      {
+        "name": "Blockchain Networks",
+        "description": "Decentralized systems that use distributed consensus mechanisms for security and trust."
+      }
+    ]
+  },
+
+  "computational complexity": {
+    "definition": "A branch of theoretical computer science that classifies problems based on the resources required to solve them.",
+    "complexity_levels": {
+      "beginner": "Computational complexity is like sorting tasks by difficulty—some are quick, some take forever, and some are impossible.",
+      "intermediate": "Time complexity (Big O notation) and space complexity measure how algorithms scale with input size, helping optimize performance.",
+      "advanced": "Complexity classes (P, NP, NP-hard, NP-complete) determine problem solvability and computational limits, crucial in algorithm design and cryptography."
+    },
+    "related_concepts": ["Big O Notation", "P vs NP", "Algorithm Analysis"],
+    "examples": [
+      {
+        "name": "Traveling Salesman Problem (TSP)",
+        "description": "A well-known NP-hard problem that requires finding the shortest route visiting multiple cities."
+      },
+      {
+        "name": "P vs NP Problem",
+        "description": "A fundamental open problem in theoretical computer science regarding the difficulty of verifying vs solving problems."
+      }
+    ]
+  },
+
+  "software engineering": {
+    "definition": "A discipline that applies engineering principles to design, develop, and maintain software systems efficiently and reliably.",
+    "complexity_levels": {
+      "beginner": "Software engineering is like building a house—you need a blueprint (design), workers (developers), and quality checks (testing).",
+      "intermediate": "It involves structured methodologies like Agile, Waterfall, and DevOps for managing software development life cycles effectively.",
+      "advanced": "Advanced topics include software architecture patterns (MVC, microservices), design patterns, and scalable system design."
+    },
+    "related_concepts": ["Software Development Life Cycle", "Design Patterns", "Version Control"],
+    "examples": [
+      {
+        "name": "Model-View-Controller (MVC)",
+        "description": "A software design pattern that separates application logic, UI, and data handling."
+      },
+      {
+        "name": "Microservices Architecture",
+        "description": "A scalable system design where applications are composed of loosely coupled, independently deployable services."
+      }
+    ]
+  },
+
+  "natural language processing (NLP)": {
+    "definition": "A field of AI that enables computers to understand, interpret, and generate human language.",
+    "complexity_levels": {
+      "beginner": "NLP helps computers understand human language, like how chatbots or voice assistants can answer questions.",
+      "intermediate": "It involves tasks like tokenization, sentiment analysis, and named entity recognition using techniques like word embeddings and transformers.",
+      "advanced": "Cutting-edge NLP uses deep learning models like GPT and BERT, leveraging attention mechanisms and large-scale training datasets for human-like text generation."
+    },
+    "related_concepts": ["Machine Learning", "Text Mining", "Chatbots"],
+    "examples": [
+      {
+        "name": "Sentiment Analysis",
+        "description": "Determining whether a piece of text expresses a positive, negative, or neutral sentiment."
+      },
+      {
+        "name": "Machine Translation",
+        "description": "Automatically translating text between languages using deep learning techniques."
+      }
+    ]
+  },
+
+  "graph databases": {
+    "definition": "A type of database designed to store and analyze complex relationships using graph structures.",
+    "complexity_levels": {
+      "beginner": "A graph database is like a social network—it connects data through relationships, just like people connect through friendships.",
+      "intermediate": "Graph databases use nodes, edges, and properties to represent and query data efficiently, making them ideal for recommendation engines and fraud detection.",
+      "advanced": "Advanced topics include graph traversal algorithms, property graphs vs. RDF graphs, and distributed graph database architectures."
+    },
+    "related_concepts": ["Graph Theory", "NoSQL", "Data Relationships"],
+    "examples": [
+      {
+        "name": "Neo4j",
+        "description": "A popular graph database used for storing and querying connected data efficiently."
+      },
+      {
+        "name": "PageRank Algorithm",
+        "description": "Used by search engines to rank web pages based on link relationships."
+      }
+    ]
+  },
+
+  "edge computing": {
+    "definition": "A distributed computing paradigm that processes data closer to the source rather than relying on centralized cloud servers.",
+    "complexity_levels": {
+      "beginner": "Edge computing is like processing information on your phone instead of sending it to a data center—it's faster and more efficient.",
+      "intermediate": "It reduces latency and bandwidth usage by running computations near IoT devices, enabling real-time applications.",
+      "advanced": "Advanced edge computing involves AI at the edge, 5G integration, and decentralized data processing architectures."
+    },
+    "related_concepts": ["Cloud Computing", "IoT", "Real-Time Processing"],
+    "examples": [
+      {
+        "name": "Autonomous Vehicles",
+        "description": "Processes sensor data locally to make real-time driving decisions without relying on cloud latency."
+      },
+      {
+        "name": "Smart Cameras",
+        "description": "Uses edge AI to recognize faces or detect motion without sending video feeds to a central server."
+      }
+    ]
+  },
+  "quantum computing": {
+    "definition": "A revolutionary computing paradigm that leverages quantum mechanics to perform calculations far beyond classical computers.",
+    "complexity_levels": {
+      "beginner": "Quantum computing is like using magic coins that can be both heads and tails at the same time, making some calculations much faster.",
+      "intermediate": "It utilizes qubits, superposition, and entanglement to solve problems such as factorization and optimization more efficiently than classical computers.",
+      "advanced": "Advanced topics include quantum algorithms (Shor’s, Grover’s), quantum error correction, and quantum cryptography, which challenge traditional computational limits."
+    },
+    "related_concepts": ["Qubit", "Superposition", "Quantum Cryptography", "Entanglement", "Quantum Gates"],
+    "examples": [
+      {
+        "name": "Shor’s Algorithm",
+        "description": "A quantum algorithm that can factor large numbers exponentially faster than classical methods, threatening RSA encryption."
+      },
+      {
+        "name": "Grover’s Algorithm",
+        "description": "A quantum search algorithm that speeds up database searches with quadratic efficiency gains."
+      }
+    ]
+  },
+
+  "real-time systems": {
+    "definition": "Computer systems that must process data and produce outputs within strict timing constraints.",
+    "complexity_levels": {
+      "beginner": "A real-time system is like a traffic light—it must respond instantly to changing conditions to prevent accidents.",
+      "intermediate": "They are categorized into hard, soft, and firm real-time systems based on their deadline strictness and failure tolerance.",
+      "advanced": "Advanced topics include real-time scheduling algorithms (Rate-Monotonic, Earliest Deadline First) and real-time operating systems (RTOS) for embedded and safety-critical applications."
+    },
+    "related_concepts": ["Embedded Systems", "Scheduling Algorithms", "RTOS"],
+    "examples": [
+      {
+        "name": "Flight Control Systems",
+        "description": "Real-time systems in aircraft must respond instantly to pilot inputs to ensure safe operation."
+      },
+      {
+        "name": "Industrial Automation",
+        "description": "Manufacturing robots rely on real-time control for precision and efficiency."
+      }
+    ]
+  },
+
+  "bioinformatics": {
+    "definition": "An interdisciplinary field combining biology, computer science, and mathematics to analyze biological data.",
+    "complexity_levels": {
+      "beginner": "Bioinformatics is like using computers to study DNA, helping scientists understand diseases and genetics.",
+      "intermediate": "It involves sequence alignment, protein structure prediction, and genome assembly using algorithms like BLAST and Hidden Markov Models.",
+      "advanced": "Advanced bioinformatics includes deep learning for protein folding, CRISPR gene editing simulations, and large-scale genomic data analysis."
+    },
+    "related_concepts": ["Genomics", "Data Science", "Pattern Recognition"],
+    "examples": [
+      {
+        "name": "Human Genome Project",
+        "description": "A large-scale bioinformatics project that mapped all human genes."
+      },
+      {
+        "name": "AlphaFold",
+        "description": "A deep learning model that predicts protein structures with near-experimental accuracy."
+      }
+    ]
+  },
+
+  "computer vision": {
+    "definition": "A field of artificial intelligence that enables computers to interpret and understand visual information from the world.",
+    "complexity_levels": {
+      "beginner": "Computer vision is like teaching a computer to see and recognize objects, just like humans do.",
+      "intermediate": "It uses image processing, feature extraction, and deep learning models like CNNs to analyze images and videos.",
+      "advanced": "Advanced topics include object detection (YOLO, Faster R-CNN), 3D vision, and real-time tracking used in robotics and autonomous vehicles."
+    },
+    "related_concepts": ["Deep Learning", "Image Processing", "Neural Networks"],
+    "examples": [
+      {
+        "name": "Facial Recognition",
+        "description": "Used in security systems and smartphones to authenticate users based on their facial features."
+      },
+      {
+        "name": "Self-Driving Cars",
+        "description": "Autonomous vehicles use computer vision to detect pedestrians, road signs, and other vehicles."
+      }
+    ]
+  },
+
+  "compiler optimization": {
+    "definition": "Techniques used in compilers to improve the efficiency of generated machine code.",
+    "complexity_levels": {
+      "beginner": "Compiler optimization is like rewriting a messy essay to make it shorter and clearer without changing the meaning.",
+      "intermediate": "It involves loop unrolling, constant propagation, and inlining to enhance performance without altering program behavior.",
+      "advanced": "Advanced topics include register allocation, instruction scheduling, and just-in-time (JIT) compilation for runtime optimizations."
+    },
+    "related_concepts": ["Compiler Design", "Code Generation", "Intermediate Representation"],
+    "examples": [
+      {
+        "name": "LLVM Compiler Framework",
+        "description": "A modular compiler that performs advanced optimizations for multiple programming languages."
+      },
+      {
+        "name": "Just-In-Time (JIT) Compilation",
+        "description": "Dynamically optimizes code at runtime, commonly used in Java and JavaScript engines."
+      }
+    ]
+  },
+
+  "edge AI": {
+    "definition": "The integration of artificial intelligence into edge devices to process data locally without relying on cloud computing.",
+    "complexity_levels": {
+      "beginner": "Edge AI is like having a smart assistant on your phone that can process commands without needing the internet.",
+      "intermediate": "It uses lightweight machine learning models optimized for devices like smartphones, IoT sensors, and cameras to enable real-time AI applications.",
+      "advanced": "Advanced edge AI involves federated learning, on-device deep learning acceleration, and optimizing models for hardware constraints (e.g., TensorFlow Lite, NVIDIA Jetson)."
+    },
+    "related_concepts": ["Edge Computing", "Machine Learning", "IoT"],
+    "examples": [
+      {
+        "name": "Voice Assistants",
+        "description": "AI models running locally on smartphones to process voice commands without internet connectivity."
+      },
+      {
+        "name": "Smart Security Cameras",
+        "description": "Use AI to detect intrusions and recognize faces in real time without sending data to the cloud."
+      }
+    ]
+  },
+
+  "fuzzy logic": {
+    "definition": "A mathematical logic framework that allows reasoning with approximate values rather than binary true/false values.",
+    "complexity_levels": {
+      "beginner": "Fuzzy logic is like how humans think in shades of gray instead of black and white—it helps computers make decisions when things aren’t absolute.",
+      "intermediate": "It extends traditional boolean logic by allowing partial truth values between 0 and 1, making it useful in control systems and AI.",
+      "advanced": "Advanced fuzzy logic applications include neuro-fuzzy systems, fuzzy clustering, and rule-based decision-making for uncertain environments."
+    },
+    "related_concepts": ["Artificial Intelligence", "Control Systems", "Neural Networks"],
+    "examples": [
+      {
+        "name": "Fuzzy Controllers",
+        "description": "Used in air conditioners and washing machines to adjust settings based on approximate inputs."
+      },
+      {
+        "name": "Fuzzy Neural Networks",
+        "description": "Combines fuzzy logic with deep learning to handle uncertain or imprecise data in AI models."
+      }
+    ]
+  },
+  "skip list": {
+    "definition": "A probabilistic data structure that allows fast search, insertion, and deletion operations, similar to balanced trees but easier to implement.",
+    "complexity_levels": {
+      "beginner": "A skip list is like a layered highway system where you can take shortcuts instead of stopping at every exit.",
+      "intermediate": "Skip lists use multiple linked lists with different levels, allowing efficient searching similar to binary search but implemented with linked structures.",
+      "advanced": "Advanced skip lists leverage randomized balancing, expected logarithmic-time operations, and optimizations such as fractional cascading and concurrent skip lists."
+    },
+    "related_concepts": ["Linked List", "Binary Search", "Balanced Trees"],
+    "examples": [
+      {
+        "name": "Concurrent Skip List",
+        "description": "A thread-safe skip list used in distributed systems and databases."
+      },
+      {
+        "name": "Indexing in Databases",
+        "description": "Used in key-value stores and databases for efficient range queries."
+      }
+    ]
+  },
+
+  "suffix array": {
+    "definition": "A sorted array of all suffixes of a given string, commonly used in string matching problems.",
+    "complexity_levels": {
+      "beginner": "A suffix array is like a list of all possible endings of a word, sorted in alphabetical order to make searching easier.",
+      "intermediate": "It enables efficient pattern searching in texts and is often built using sorting or suffix tree compression techniques.",
+      "advanced": "Advanced construction methods include the DC3 algorithm (O(n log n)) and induced sorting (O(n)), often used in bioinformatics and text indexing."
+    },
+    "related_concepts": ["Suffix Tree", "String Matching", "Pattern Searching"],
+    "examples": [
+      {
+        "name": "Burrows-Wheeler Transform",
+        "description": "A text compression algorithm that relies on suffix arrays for efficient encoding."
+      },
+      {
+        "name": "Longest Common Prefix (LCP) Array",
+        "description": "An auxiliary data structure that helps optimize pattern searching with suffix arrays."
+      }
+    ]
+  },
+
+  "kd-tree": {
+    "definition": "A space-partitioning data structure used to organize points in a k-dimensional space.",
+    "complexity_levels": {
+      "beginner": "A kd-tree is like organizing a city into smaller districts to quickly find a specific location.",
+      "intermediate": "It recursively partitions a k-dimensional space using hyperplanes, optimizing nearest neighbor searches and range queries.",
+      "advanced": "Advanced topics include balanced kd-tree construction, approximate nearest neighbor search, and optimizations for high-dimensional spaces in machine learning."
+    },
+    "related_concepts": ["Binary Tree", "Spatial Indexing", "Nearest Neighbor Search"],
+    "examples": [
+      {
+        "name": "KNN Search",
+        "description": "Used in machine learning for nearest neighbor classification and clustering."
+      },
+      {
+        "name": "Ray Tracing Optimization",
+        "description": "Accelerates rendering by quickly finding object intersections in 3D space."
+      }
+    ]
+  },
+
+  "b-tree": {
+    "definition": "A self-balancing tree data structure that maintains sorted data and allows efficient insertion, deletion, and search operations.",
+    "complexity_levels": {
+      "beginner": "A B-tree is like an organized bookshelf where books are grouped into sections, making searching easy.",
+      "intermediate": "It generalizes binary search trees by allowing multiple children per node, keeping height logarithmic for fast operations.",
+      "advanced": "Advanced topics include B+-trees (used in databases), cache-aware B-trees, and concurrent B-tree implementations for large-scale indexing."
+    },
+    "related_concepts": ["Self-Balancing Tree", "Database Indexing", "AVL Tree"],
+    "examples": [
+      {
+        "name": "Database Indexing",
+        "description": "B-trees are widely used in relational databases to optimize query performance."
+      },
+      {
+        "name": "File Systems",
+        "description": "Many modern file systems (e.g., NTFS, Ext4) use B-trees for efficient storage management."
+      }
+    ]
+  },
+
+  "boyer-moore algorithm": {
+    "definition": "An efficient string-searching algorithm that skips sections of text instead of checking every character.",
+    "complexity_levels": {
+      "beginner": "The Boyer-Moore algorithm is like finding a word in a book by jumping over sections instead of reading every letter.",
+      "intermediate": "It preprocesses the pattern to determine shift distances, using heuristics like the bad character rule and good suffix rule to speed up searches.",
+      "advanced": "Advanced optimizations include the Galil rule, preprocessing for multiple pattern searches, and hybrid approaches with suffix automata."
+    },
+    "related_concepts": ["String Matching", "Knuth-Morris-Pratt", "Suffix Array"],
+    "examples": [
+      {
+        "name": "Text Editors",
+        "description": "Used in text search functionalities in software like Notepad++ and Vim."
+      },
+      {
+        "name": "Genome Sequencing",
+        "description": "Speeds up searching for DNA sequences in large genomic datasets."
+      }
+    ]
+  },
+
+  "treap": {
+    "definition": "A randomized binary search tree that maintains heap properties and search tree properties simultaneously.",
+    "complexity_levels": {
+      "beginner": "A treap is like organizing a list both alphabetically and by importance, allowing quick lookups and reorganization.",
+      "intermediate": "It balances itself probabilistically by assigning random priorities to nodes and maintaining heap order while preserving binary search properties.",
+      "advanced": "Advanced topics include persistent treaps, implicit treaps for range queries, and treap-based data structures in competitive programming."
+    },
+    "related_concepts": ["Binary Search Tree", "Heap", "Self-Balancing Tree"],
+    "examples": [
+      {
+        "name": "Implicit Treap",
+        "description": "Used in competitive programming for range queries and dynamic arrays."
+      },
+      {
+        "name": "Persistent Treap",
+        "description": "Stores historical versions of data structures without duplicating entire trees."
+      }
+    ]
+  },
+
+  "dynamic connectivity": {
+    "definition": "A class of problems related to efficiently handling connectivity changes in graphs.",
+    "complexity_levels": {
+      "beginner": "Dynamic connectivity is like keeping track of friends in a social network as people make and break connections.",
+      "intermediate": "It involves data structures like Union-Find (Disjoint Set Union) with path compression and link-by-rank optimizations for fast connectivity queries.",
+      "advanced": "Advanced solutions include link-cut trees, Euler-tour trees, and dynamic graph algorithms used in real-time network analysis."
+    },
+    "related_concepts": ["Graph Theory", "Union-Find", "Disjoint Sets"],
+    "examples": [
+      {
+        "name": "Network Routing",
+        "description": "Used in dynamic routing algorithms to quickly update network topology changes."
+      },
+      {
+        "name": "Social Networks",
+        "description": "Facebook and LinkedIn use dynamic connectivity algorithms to track relationships efficiently."
+      }
+    ]
+  },
+  "uninformed search algorithms": {
+    "definition": "A category of search algorithms that explore the problem space without any additional information about the goal state other than how to generate successors.",
+    "complexity_levels": {
+      "beginner": "Uninformed search is like exploring a maze blindly, checking each path until you find the way out.",
+      "intermediate": "Uninformed search algorithms do not use problem-specific heuristics but systematically explore the search space using methods like BFS and DFS.",
+      "advanced": "Advanced concepts include iterative deepening, bidirectional search, and complexity analysis in terms of completeness, optimality, and time-space trade-offs."
+    },
+    "related_concepts": ["Breadth-First Search", "Depth-First Search", "Graph Traversal"],
+    "examples": [
+      {
+        "name": "Breadth-First Search (BFS)",
+        "description": "Explores all nodes at the current depth before moving deeper, ensuring the shortest path is found in unweighted graphs."
+      },
+      {
+        "name": "Depth-First Search (DFS)",
+        "description": "Explores as deep as possible along a branch before backtracking, useful in scenarios like topological sorting and maze solving."
+      },
+      {
+        "name": "Uniform Cost Search (UCS)",
+        "description": "An uninformed search algorithm that expands the least-cost node first, guaranteeing optimality if costs are positive."
+      }
+    ]
+  },
+
+  "informed search algorithms": {
+    "definition": "A category of search algorithms that use problem-specific heuristics to make search more efficient and goal-directed.",
+    "complexity_levels": {
+      "beginner": "Informed search is like using a treasure map instead of wandering randomly—it helps you find the shortest or best path faster.",
+      "intermediate": "Informed search algorithms use heuristic functions to guide exploration towards the goal, reducing unnecessary exploration.",
+      "advanced": "Advanced topics include admissibility, consistency of heuristics, A* search optimizations, heuristic function design, and AI applications in game solving and planning."
+    },
+    "related_concepts": ["Heuristics", "A* Algorithm", "Greedy Search"],
+    "examples": [
+      {
+        "name": "Greedy Best-First Search",
+        "description": "Chooses the path that seems closest to the goal based on a heuristic function, but does not guarantee optimality."
+      },
+      {
+        "name": "A* Search Algorithm",
+        "description": "Uses both path cost and heuristic estimates to find the most efficient path, guaranteeing optimality if the heuristic is admissible."
+      },
+      {
+        "name": "Iterative Deepening A* (IDA*)",
+        "description": "A memory-efficient variant of A* that uses iterative deepening to progressively refine the search."
+      }
+    ]
+  },
+  "dijkstra's algorithm": {
+    "definition": "An algorithm for finding the shortest paths between nodes in a weighted graph.",
+    "complexity_levels": {
+      "beginner": "Dijkstra’s algorithm is like finding the shortest way to travel between two cities using a map, considering road distances.",
+      "intermediate": "Dijkstra’s algorithm uses a priority queue to expand the least-cost node first, updating distances to neighboring nodes iteratively.",
+      "advanced": "Advanced topics include Fibonacci heaps for improving efficiency, A* search as an extension with heuristics, and applications in network routing and robotics."
+    },
+    "related_concepts": ["Graph Traversal", "Priority Queue", "Shortest Path"],
+    "examples": [
+      {
+        "name": "Network Routing",
+        "description": "Used in internet routing protocols like OSPF to determine the shortest data transmission paths."
+      },
+      {
+        "name": "GPS Navigation",
+        "description": "Used in GPS systems to compute the fastest driving route based on road lengths and traffic conditions."
+      }
+    ]
+  },
+
+  "bidirectional search": {
+    "definition": "A search algorithm that simultaneously explores from both the start and goal states, meeting in the middle.",
+    "complexity_levels": {
+      "beginner": "Bidirectional search is like sending two people to meet each other by starting from opposite ends of a road, reducing the distance each must travel.",
+      "intermediate": "The algorithm runs two simultaneous searches—one forward from the start and one backward from the goal—until they intersect, reducing search complexity.",
+      "advanced": "Advanced implementations involve heuristic optimizations, frontier merging techniques, and applications in AI pathfinding and robotics."
+    },
+    "related_concepts": ["Breadth-First Search", "A* Search", "Graph Theory"],
+    "examples": [
+      {
+        "name": "Pathfinding in AI",
+        "description": "Used in game AI to efficiently determine movement paths for characters and NPCs."
+      },
+      {
+        "name": "State-Space Search",
+        "description": "Applied in problem-solving tasks like Rubik’s Cube solvers, reducing the number of explored states."
+      }
+    ]
+  },
+
+  "monte carlo tree search": {
+    "definition": "A probabilistic search algorithm used in decision-making for games and simulations by exploring possible future states.",
+    "complexity_levels": {
+      "beginner": "Monte Carlo Tree Search (MCTS) is like playing many random games to see which moves work best before making a decision.",
+      "intermediate": "MCTS builds a search tree using repeated simulations, balancing exploration of new paths and exploitation of promising ones.",
+      "advanced": "Advanced topics include Upper Confidence Bound (UCB) for exploration, pruning techniques, and deep reinforcement learning integration in game AI (e.g., AlphaGo)."
+    },
+    "related_concepts": ["Game Theory", "Reinforcement Learning", "Decision Trees"],
+    "examples": [
+      {
+        "name": "Chess AI",
+        "description": "Used in AI chess engines to evaluate the best move sequences through simulations."
+      },
+      {
+        "name": "Go and Board Games",
+        "description": "Applied in the AlphaGo AI to outperform human players in complex strategic board games."
+      }
+    ]
+  },
+
+  "beam search": {
+    "definition": "A search algorithm that explores a fixed number of most promising paths at each step instead of considering all possible paths.",
+    "complexity_levels": {
+      "beginner": "Beam search is like exploring only the best-looking paths in a maze instead of considering every possible route.",
+      "intermediate": "It limits memory usage by keeping only the top k candidates per step, making it faster than exhaustive search while sacrificing completeness.",
+      "advanced": "Advanced topics include beam width tuning, integration with neural network-based sequence prediction, and hybrid approaches like diversity-augmented beam search."
+    },
+    "related_concepts": ["Heuristic Search", "A* Algorithm", "Natural Language Processing"],
+    "examples": [
+      {
+        "name": "Machine Translation",
+        "description": "Used in neural machine translation models (e.g., Google Translate) to generate the best sequence of words."
+      },
+      {
+        "name": "Speech Recognition",
+        "description": "Applied in speech-to-text systems to predict the most likely word sequences given phonetic inputs."
+      }
+    ]
   }
+
+
+
+
 
 }
 
