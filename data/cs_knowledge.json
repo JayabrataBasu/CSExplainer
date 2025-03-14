@@ -475,5 +475,236 @@
         "description": "A field of AI that enables computers to understand, interpret, and generate human language."
       }
     ]
-  }}
+  },"array": {
+    "definition": "A collection of elements stored in contiguous memory locations, allowing fast access via indexing.",
+    "complexity_levels": {
+      "beginner": "An array is like a row of lockers, where each locker holds a value, and you can quickly access any locker by its number.",
+      "intermediate": "Arrays provide constant-time access (O(1)) using indexing but can be costly to resize. Common operations include traversal, searching, and sorting.",
+      "advanced": "Advanced array techniques include dynamic arrays (e.g., C++ vectors), multi-dimensional arrays, memory alignment optimizations, and cache-efficient data structures."
+    },
+    "related_concepts": ["Indexing", "Dynamic Arrays", "Multidimensional Arrays"],
+    "examples": [
+      {
+        "name": "Dynamic Array",
+        "description": "A resizable array that automatically expands when full, commonly implemented in high-level languages like Python (lists) and Java (ArrayList)."
+      }
+    ]
+  },
+
+  "linked list": {
+    "definition": "A data structure where elements (nodes) are connected via pointers, forming a linear sequence.",
+    "complexity_levels": {
+      "beginner": "A linked list is like a chain of paperclips, where each clip holds a piece of paper and points to the next one.",
+      "intermediate": "Unlike arrays, linked lists do not require contiguous memory allocation, allowing efficient insertions and deletions at the cost of slower lookups.",
+      "advanced": "Variations such as doubly linked lists and circular linked lists enable more flexible traversal and memory-efficient implementations in system design."
+    },
+    "related_concepts": ["Node", "Pointer", "Doubly Linked List", "Circular Linked List"],
+    "examples": [
+      {
+        "name": "Singly Linked List",
+        "description": "A linked list where each node points to the next, allowing linear traversal but only in one direction."
+      },
+      {
+        "name": "Doubly Linked List",
+        "description": "A linked list where each node points to both the next and previous nodes, allowing bidirectional traversal."
+      }
+    ]
+  },
+
+  "stack": {
+    "definition": "A last-in, first-out (LIFO) data structure used for managing function calls, undo operations, and expression evaluation.",
+    "complexity_levels": {
+      "beginner": "A stack is like a stack of plates in a cafeteria—you can only take the top plate off before reaching the ones below.",
+      "intermediate": "Stacks support operations like push (insert), pop (remove), and peek (view top element) in constant time (O(1)).",
+      "advanced": "Advanced applications include recursive function calls, memory stack management in programming languages, and backtracking algorithms."
+    },
+    "related_concepts": ["LIFO", "Push", "Pop", "Call Stack"],
+    "examples": [
+      {
+        "name": "Function Call Stack",
+        "description": "A stack that tracks active function calls in a program, allowing recursive execution."
+      },
+      {
+        "name": "Undo/Redo in Text Editors",
+        "description": "Uses stacks to track user actions, enabling undo and redo functionality."
+      }
+    ]
+  },
+
+  "queue": {
+    "definition": "A first-in, first-out (FIFO) data structure commonly used in scheduling and buffering.",
+    "complexity_levels": {
+      "beginner": "A queue is like a line at a ticket counter—the first person in line gets served first.",
+      "intermediate": "Queues support enqueue (insert) and dequeue (remove) operations in O(1) time using linked lists or circular arrays.",
+      "advanced": "Variations include priority queues, double-ended queues (deques), and concurrent queues for multi-threaded programming."
+    },
+    "related_concepts": ["FIFO", "Enqueue", "Dequeue", "Circular Queue"],
+    "examples": [
+      {
+        "name": "Print Job Queue",
+        "description": "A queue where print jobs are processed in the order they are received."
+      },
+      {
+        "name": "CPU Task Scheduling",
+        "description": "Uses queues to manage processes waiting for CPU execution."
+      }
+    ]
+  },
+
+  "heap": {
+    "definition": "A specialized tree-based data structure that maintains a specific ordering property.",
+    "complexity_levels": {
+      "beginner": "A heap is like a priority queue at an amusement park, where people with VIP passes get ahead regardless of when they arrived.",
+      "intermediate": "Heaps are binary trees that satisfy the heap property: in a max-heap, each parent is greater than its children, while in a min-heap, each parent is smaller.",
+      "advanced": "Advanced topics include Fibonacci heaps for efficient graph algorithms and memory heaps for dynamic memory allocation in operating systems."
+    },
+    "related_concepts": ["Priority Queue", "Binary Heap", "Heap Sort"],
+    "examples": [
+      {
+        "name": "Dijkstra’s Algorithm",
+        "description": "Uses a min-heap to efficiently find the shortest path in graphs."
+      },
+      {
+        "name": "Memory Management",
+        "description": "Operating systems use heaps to allocate and manage memory dynamically."
+      }
+    ]
+  },
+
+  "trie": {
+    "definition": "A tree-like data structure used for efficient retrieval of keys, particularly in dictionaries and autocomplete systems.",
+    "complexity_levels": {
+      "beginner": "A trie is like an address book, where each contact is stored letter by letter in a structured way.",
+      "intermediate": "Tries enable fast string searches, prefix matching, and dictionary lookups by breaking words into character-level nodes.",
+      "advanced": "Tries are used in advanced text processing, IP routing, and bioinformatics, with optimizations like Ternary Search Trees and compressed tries."
+    },
+    "related_concepts": ["Prefix Tree", "Suffix Tree", "Autocomplete"],
+    "examples": [
+      {
+        "name": "Autocomplete in Search Engines",
+        "description": "Google’s search bar uses a trie to quickly suggest search queries as users type."
+      },
+      {
+        "name": "IP Routing",
+        "description": "Tries are used in networking to efficiently route packets based on IP address prefixes."
+      }
+    ]
+  },
+  "binary tree": {
+    "definition": "A tree data structure where each node has at most two children, referred to as the left child and right child.",
+    "complexity_levels": {
+      "beginner": "A binary tree is like a family tree, where each person has at most two children (siblings).",
+      "intermediate": "Binary trees support efficient searching, insertion, and deletion operations, with common variants like binary search trees and AVL trees.",
+      "advanced": "Advanced topics include balanced binary trees, Huffman encoding, and binary expression trees for arithmetic evaluation."
+    },
+    "related_concepts": ["Binary Search Tree", "Balanced Tree", "Traversal"],
+    "examples": [
+      {
+        "name": "Binary Search Tree",
+        "description": "A binary tree where each left child is less than its parent, and each right child is greater."
+      },
+      {
+        "name": "Huffman Encoding",
+        "description": "Uses binary trees to compress data by assigning shorter codes to more frequent characters."
+      }
+    ]
+  },
+  "graph theory": {
+    "definition": "A branch of mathematics that studies relationships between pairs of objects, modeling networks and connections.",
+    "complexity_levels": {
+      "beginner": "Graph theory is like drawing a map of your neighborhood, showing how streets connect different locations.",
+      "intermediate": "Graphs consist of vertices (nodes) connected by edges (links), with applications in computer networks, social networks, and transportation systems.",
+      "advanced": "Advanced topics include graph algorithms (Dijkstra, BFS), graph coloring, planar graphs, and spectral graph theory."
+    },
+    "related_concepts": ["Vertex", "Edge", "Adjacency", "Path", "Cycle"],
+    "examples": [
+      {
+        "name": "Shortest Path Problem",
+        "description": "Finding the most efficient route between two locations on a map using graph algorithms."
+      },
+      {
+        "name": "Social Network Analysis",
+        "description": "Studying relationships between individuals in a social network using graph theory."
+      }
+    ]
+  },
+  "dynamic programming": {
+    "definition": "A method for solving complex problems by breaking them down into simpler subproblems and storing intermediate results.",
+    "complexity_levels": {
+      "beginner": "Dynamic programming is like solving a jigsaw puzzle, starting with small pieces and combining them to complete the picture.",
+      "intermediate": "Dynamic programming involves solving overlapping subproblems and optimal substructure, often using memoization or tabulation techniques.",
+      "advanced": "Advanced topics include dynamic programming on graphs, matrix chain multiplication, and sequence alignment algorithms."
+    },
+    "related_concepts": ["Memoization", "Tabulation", "Optimal Substructure"],
+    "examples": [
+      {
+        "name": "Fibonacci Sequence",
+        "description": "Calculating Fibonacci numbers efficiently using dynamic programming to avoid redundant computations."
+      },
+      {
+        "name": "Longest Common Subsequence",
+        "description": "Finding the longest common subsequence between two sequences using dynamic programming."
+      }
+    ]
+  },
+  "greedy algorithm": {
+    "definition": "An algorithmic paradigm that makes the locally optimal choice at each step with the hope of finding a global optimum.",
+    "complexity_levels": {
+      "beginner": "Greedy algorithms are like eating your dessert first to maximize immediate satisfaction, without considering the overall meal plan.",
+      "intermediate": "Greedy algorithms select the best immediate choice without revisiting decisions, often used for optimization problems with optimal substructure.",
+      "advanced": "Advanced topics include greedy algorithms for graph problems, interval scheduling, and Huffman coding."
+    },
+    "related_concepts": ["Optimization", "Optimal Substructure", "Interval Scheduling"],
+    "examples": [
+      {
+        "name": "Fractional Knapsack Problem",
+        "description": "Maximizing the value of items placed in a knapsack without exceeding its weight capacity."
+      },
+      {
+        "name": "Prim's Algorithm",
+        "description": "Finding the minimum spanning tree of a graph using a greedy approach."
+      }
+    ]
+  },
+  "divide and conquer": {
+    "definition": "A problem-solving paradigm that breaks a problem into smaller, independent subproblems, solves them recursively, and combines the solutions.",
+    "complexity_levels": {
+      "beginner": "Divide and conquer is like sharing a big task with friends, where each person works on a part independently before combining the results.",
+      "intermediate": "Divide and conquer algorithms divide problems into smaller instances, solve them independently, and combine solutions efficiently.",
+      "advanced": "Advanced topics include parallel divide and conquer, Strassen's matrix multiplication, and fast Fourier transform."
+    },
+    "related_concepts": ["Recursion", "Subproblems", "Merge Sort"],
+    "examples": [
+      {
+        "name": "Merge Sort",
+        "description": "Sorting an array by dividing it into two halves, sorting each half, and merging the results."
+      },
+      {
+        "name": "Binary Search",
+        "description": "Finding an element in a sorted array by dividing the search interval in half at each step."
+      }
+    ]
+  },
+  "backtracking": {
+    "definition": "A problem-solving technique that incrementally builds candidates for a solution and abandons a candidate as soon as it determines it cannot lead to a valid solution.",
+    "complexity_levels": {
+      "beginner": "Backtracking is like solving a maze by trying different paths and backtracking when you hit a dead end.",
+      "intermediate": "Backtracking algorithms explore decision trees to find solutions, often using recursion to generate and test candidate solutions.",
+      "advanced": "Advanced topics include constraint satisfaction problems, Sudoku solvers, and N-Queens problems."
+    },
+    "related_concepts": ["Decision Tree", "Constraint Satisfaction", "Sudoku Solver"],
+    "examples": [
+      {
+        "name": "N-Queens Problem",
+        "description": "Placing N queens on an N×N chessboard so that no two queens threaten each other, using backtracking to explore possible placements."
+      },
+      {
+        "name": "Sudoku Solver",
+        "description": "Filling an incomplete Sudoku grid by systematically placing numbers and backtracking when conflicts arise."
+      }
+    ]
+  }
+
+}
+
   
