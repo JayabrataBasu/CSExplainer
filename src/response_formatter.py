@@ -3,31 +3,38 @@ class ResponseFormatter:
         self.knowledge_manager = knowledge_manager
         
     def format_explanation(self, concept_name, complexity_level="intermediate"):
-        """Format an explanation for a concept at the specified complexity level."""
+        """
+        Format an explanation for a concept at the specified complexity level
+        
+        Args:
+            concept_name: Name of the concept to explain
+            complexity_level: Desired complexity ('beginner', 'intermediate', 'advanced')
+            
+        Returns:
+            Formatted explanation as a string
+        """
         concept = self.knowledge_manager.get_concept(concept_name)
+        
         if not concept:
-            return f"I don't have information about '{concept_name}'."
-            
-        # Build the response
-        response = []
+            return f"I don't have information about {concept_name} in my knowledge base."
         
-        # Add definition
-        if "definition" in concept:
-            response.append(f"**{concept_name.title()}**: {concept['definition']}")
-            
-        # Add complexity-specific explanation
-        if "complexity_levels" in concept and complexity_level in concept["complexity_levels"]:
-            response.append(f"\n{concept['complexity_levels'][complexity_level]}")
+        # Get the appropriate explanation based on complexity level
+        explanation_key = f"{complexity_level}_explanation"
+        if explanation_key not in concept:
+            explanation_key = "intermediate_explanation"  # Fall back to intermediate
+            if explanation_key not in concept:
+                explanation_key = "definition"  # Last resort
         
-        # Add examples if available
-        if "examples" in concept and concept["examples"]:
-            response.append("\n**Examples:**")
-            for example in concept["examples"]:
-                response.append(f"- **{example['name']}**: {example['description']}")
-                
-        # Add related concepts
-        if "related_concepts" in concept and concept["related_concepts"]:
-            related = concept["related_concepts"]
-            response.append(f"\n**Related concepts:** {', '.join(related)}")
-            
-        return "\n".join(response)
+        explanation = concept.get(explanation_key, "No explanation available.")
+        
+        # Format response with Markdown
+        name = concept.get("name", concept_name.title())
+        response = f"**{name}:** {concept.get('definition', '')}\n\n"
+        response += explanation
+        
+        # Add related concepts if available
+        related = concept.get("related_concepts", [])
+        if related:
+            response += "\n\n**Related concepts:** " + ", ".join(related)
+        
+        return response
