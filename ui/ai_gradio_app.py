@@ -284,6 +284,42 @@ class AIEnhancedGradioApp:
             
         return None
     
+    def get_learning_path_details(self, path_concepts):
+        """
+        Generate detailed information about concepts in the learning path
+        
+        Args:
+            path_concepts: List of concepts in the learning path
+            
+        Returns:
+            Markdown text with details about each concept
+        """
+        details = "# Learning Path Details\n\n"
+        
+        for i, concept in enumerate(path_concepts):
+            details += f"## {i+1}. {concept.title()}\n"
+            
+            # Get concept definition
+            definition = self.knowledge_manager.get_concept_definition(concept)
+            if definition:
+                details += f"**Definition**: {definition}\n\n"
+            
+            # Get related concepts
+            related = self.knowledge_manager.get_related_concepts(concept)
+            if related:
+                details += "**Related concepts**: " + ", ".join(related[:5]) + "\n\n"
+                
+            # Get prerequisites (simulate using knowledge graph)
+            # In a real implementation, this would use actual prerequisite data
+            if i > 0:
+                details += f"**Prerequisites**: {path_concepts[i-1].title()} should be studied before this concept.\n\n"
+                
+            # Add a separator between concepts
+            if i < len(path_concepts) - 1:
+                details += "---\n\n"
+                
+        return details
+    
     def update_metrics(self, interaction_time, questions_asked):
         """Update interaction metrics"""
         # Validate and update values

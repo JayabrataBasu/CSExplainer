@@ -141,7 +141,8 @@ class AIDrivenVisualizer:
         plt.xlabel("Difficulty", fontsize=12)
         plt.grid(True, alpha=0.3, axis='x')
 
-    def generate_learning_path(self, concepts, difficulties, knowledge_level=0.5):
+    def generate_learning_path(self, concepts, difficulties, knowledge_level=0.5, max_concepts=15, 
+                             show_connections=True, highlight_concept=None):
         """
         Generate a personalized learning path based on concept difficulties
         and user knowledge level
@@ -150,10 +151,18 @@ class AIDrivenVisualizer:
             concepts: List of concept names
             difficulties: List of difficulty ratings for each concept
             knowledge_level: Float between 0-1 representing user knowledge
+            max_concepts: Maximum number of concepts to display
+            show_connections: Whether to draw connections between related concepts
+            highlight_concept: Specific concept to highlight in the visualization
             
         Returns:
             Base64-encoded visualization of the suggested learning path
         """
+        # Ensure we don't exceed the number of available concepts
+        if len(concepts) > max_concepts:
+            concepts = concepts[:max_concepts]
+            difficulties = difficulties[:max_concepts]
+            
         # Adjust difficulties based on knowledge level
         adjusted_difficulties = np.array(difficulties) * (1 - knowledge_level)
         
@@ -162,13 +171,81 @@ class AIDrivenVisualizer:
         sorted_concepts = [concepts[i] for i in sorted_indices]
         sorted_difficulties = adjusted_difficulties[sorted_indices]
         
-        plt.figure(figsize=(10, 6))
-        plt.barh(range(len(sorted_difficulties)), sorted_difficulties, 
-               color=plt.cm.viridis(np.linspace(0, 1, len(sorted_difficulties))))
+        # Create figure with sufficient height for all concepts
+        height = max(6, len(sorted_concepts) * 0.4)
+        plt.figure(figsize=(10, height))
+        
+        # Create color map - use different colors for different difficulty ranges
+        colors = plt.cm.viridis(np.linspace(0, 1, len(sorted_difficulties)))
+        
+        # Highlight specific concept if requested
+        if highlight_concept:
+            for i, concept in enumerate(sorted_concepts):
+                if highlight_concept.lower() in concept.lower():
+                    colors[i] = [0.8, 0.2, 0.2, 1.0]  # Bright red
+                    break
+        
+        # Create horizontal bars
+        bars = plt.barh(range(len(sorted_difficulties)), sorted_difficulties, 
+                color=colors, height=0.6)
+        
+        # Add value labels to the right of each bar
+        for i, bar in enumerate(bars):
+            width = bar.get_width()
+            difficulty_level = ""
+            if sorted_difficulties[i] < 0.3:
+                difficulty_level = "Easy"
+            elif sorted_difficulties[i] < 0.6:
+                difficulty_level = "Moderate"
+            else:
+                difficulty_level = "Advanced"
+                
+            plt.text(width + 0.01, bar.get_y() + bar.get_height()/2, 
+                    difficulty_level,
+                    va='center', size=9)
+        
+        # Add step numbers to the left of concept names
+        for i in range(len(sorted_concepts)):
+            plt.text(-0.15, i, f"{i+1}.", 
+                    ha='right', va='center', 
+                    fontweight='bold', fontsize=10)
+        
+        # Draw connections between concepts if requested
+        if show_connections and len(sorted_concepts) > 1:
+            for i in range(len(sorted_concepts)-1):
+                # Draw a subtle arrow from one concept to the next
+                plt.annotate("", 
+                            xy=(sorted_difficulties[i+1]*0.5, i+1), 
+                            xytext=(sorted_difficulties[i]*0.5, i),
+                            arrowprops=dict(arrowstyle="->", color="gray", 
+                                            alpha=0.6, connectionstyle="arc3,rad=0.2"))
+        
+        # Set y-axis ticks with concept names
         plt.yticks(range(len(sorted_difficulties)), sorted_concepts)
-        plt.title(f"Suggested Learning Path (Level: {knowledge_level:.1f})", fontsize=14)
+        
+        # Set chart title and labels
+        level_text = "Beginner"
+        if knowledge_level < 0.3:
+            level_text = "Beginner"
+        elif knowledge_level < 0.7:
+            level_text = "Intermediate"
+        else:
+            level_text = "Advanced"
+            
+        plt.title(f"Personalized Learning Path ({level_text} Level)", fontsize=14)
         plt.xlabel("Adjusted Difficulty", fontsize=12)
         plt.grid(True, alpha=0.3, axis='x')
+        
+        # Add a legend explaining the color scheme
+        plt.text(1.02, 0.02, "Color indicates concept complexity", 
+                transform=plt.gca().transAxes, rotation=90, 
+                va='bottom', fontsize=9, alpha=0.7)
+                
+        # Add a note about what the chart shows
+        plt.figtext(0.5, 0.01, 
+                   f"This path is optimized for your knowledge level ({knowledge_level:.1f}/1.0). Start from the top and work your way down.",
+                   ha='center', fontsize=9, style='italic')
+                   
         plt.tight_layout()
         
         # Convert to base64 for web display
